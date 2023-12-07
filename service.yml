@@ -1,0 +1,14 @@
+#Kubernetes API version
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-management-service
+#state of the Service
+spec:
+  #Service will route traffic to Pods that have a label with app: user-management-service
+  selector:
+    app: user-management-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
