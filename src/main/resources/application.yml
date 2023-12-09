@@ -9,6 +9,6 @@ github:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://nnimesha97:9a51QdieaGVk43lR@cluster0.sdndqdm.mongodb.net/developer_iq_tracker
+      uri: mongodb+srv://tharanga97:2224198Kal@cluster0.9sccwas.mongodb.net/developer_tracker
 
 #
