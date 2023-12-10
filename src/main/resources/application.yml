@@ -11,4 +11,3 @@ spring:
     mongodb:
       uri: mongodb+srv://tharanga97:2224198Kal@cluster0.9sccwas.mongodb.net/developer_tracker
 
-##
