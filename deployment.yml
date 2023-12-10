@@ -4,30 +4,22 @@ metadata:
   name: user-management-service
   labels:
     app: user-management-service
-#desired state of the Deployment
 spec:
-  #number of replicas (pods) for the Deployment
   replicas: 1
-  #how the Deployment identifies which pods to manage
   selector:
     matchLabels:
       app: user-management-service
-  #describes the pods that will be created
   template:
     metadata:
       labels:
         app: user-management-service
     spec:
-      #containers within the pod
       containers:
         - name: user-management-service
-          #Docker image to use for the container
           image: gcr.io/PROJECT_ID/IMAGE:TAG  # Replace with your Docker Hub image and tag
-          #when to pull the container image.
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          #Resource requests and limits for the container
           readinessProbe:
             httpGet:
               port: 8080
@@ -42,8 +34,8 @@ spec:
             periodSeconds: 10
           resources:
             requests:
-              cpu: "200m"
-              memory: "250Mi"
+              cpu: "300m"
+              memory: "400Mi"
             limits:
               cpu: "500m"
               memory: "512Mi"
