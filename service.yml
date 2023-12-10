@@ -8,6 +8,7 @@ spec:
   #Service will route traffic to Pods that have a label with app: user-management-service
   selector:
     app: user-management-service
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
