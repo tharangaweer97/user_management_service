@@ -28,6 +28,18 @@ spec:
           ports:
             - containerPort: 8080
           #Resource requests and limits for the container
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /api/v1/user-management-service/actuator/health
+            initialDelaySeconds: 40
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /api/v1/user-management-service/actuator/health
+            initialDelaySeconds: 40
+            periodSeconds: 10
           resources:
             requests:
               cpu: "50m"
