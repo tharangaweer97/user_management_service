@@ -4,7 +4,7 @@ server:
     context-path: /api/v1/user-management-service
 
 github:
-  user-detail-url: https://api.github.com/repos/EthicalML/awesome-production-machine-learning/contributors
+  user-detail-url: https://api.github.com/repos/apple/swift/contributors
 
 spring:
   data:
